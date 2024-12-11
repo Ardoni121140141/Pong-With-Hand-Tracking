@@ -29,10 +29,12 @@ This project combines the concept of the classic game Pong with motion tracking 
 |--|--|--|
 
 ## <img src="Images/Mentahan/LogoPanah.svg" width="30px;"/> **ID & Position Member Of Team**
-<div align\="left"\>
-| Name | ID Student | Class | Major |
+<div align="left">
+
+| Name | ID Student | Class | Major
 | :---: | :---: | :---: | :---: |
-| Ardoni Yeriko Rifana Gultom     | 121140141 | R | Informatics Engineering |
-| Kevin Simorangkir               | 121140150 | R | Informatics Engineering |
-| M. Rizki Alfaina                | 121140228 | R | Informatics Engineering |
-</div\>
+| Ardoni Yeriko Rifana Gultom     | 121140141 | R | Informatics Engineering
+| Kevin Simorangkir               | 121140150 | R | Informatics Engineering
+| M. Rizki Alfaina                | 121140228 | R | Informatics Engineering
+
+</div>
