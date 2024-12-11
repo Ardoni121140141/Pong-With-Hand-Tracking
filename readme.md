@@ -20,3 +20,6 @@
 [Discussion Analysis]()
 
 [Presentation Video]()
+
+## <img src="Images/Mentahan/Panah.svg" width="30px;"/> **Introduction**
+This project combines the concept of the classic game Pong with motion tracking technology. In this program, the user moves the paddle by utilizing hand movements detected through a webcam camera. This project uses MediaPipe to detect the position of the user's fingers in real-time, and Pygame to display game elements such as the ball, paddle, and score on the screen.
