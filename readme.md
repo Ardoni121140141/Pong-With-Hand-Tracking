@@ -1,13 +1,7 @@
-# Pong With Hand Tracking
-Proyek ini menggabungkan konsep permainan klasik Pong dengan teknologi pelacakan gerakan. Dalam program ini, pengguna menggerakkan paddle dengan memanfaatkan pergerakan tangan yang terdeteksi melalui kamera webcam. Proyek ini memanfaatkan MediaPipe untuk mendeteksi posisi jari pengguna secara real-time, serta Pygame untuk menampilkan elemen permainan seperti bola, paddle, dan skor di layar.
+<div align="center">
+<img src="Images/Mentahan/BIReadme.png" width="100%" />
+<h1> Pong With Hand Tracking </h1>
 
-# Our Team
-1. Ardoni Yeriko Rifana Gultom (121140141)
-2. Kevin Simorangkir (121140150)
-3. M Rizki Alfaina (121140228)
-
-# Logbook Mingguan
-## Minggu 1 
-- Instalasi modul OpenCV, Pygame dan Mediapipe
-- Menyiapkan file **requirements.txt** untuk keperluan instalasi dependecies
-- Membuat kode dasar untuk mendeteksi gerakan tangan menggunakan MediaPipe
+[![Github Commit](https://img.shields.io/github/commit-activity/m/Ardoni121140141/Tubes-Multimedia---Pong-With-Hand-Tracking)](#)
+[![Github Contributors](https://img.shields.io/badge/all\_contributors-3-blue.svg)](#)
+</div>
