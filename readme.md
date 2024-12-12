@@ -46,8 +46,8 @@ This project combines the concept of the classic game Pong with motion tracking 
 
 | Technology | Name Tech | Description |
 | :---: | :---: | :---: |
-| <img src="Images/Logo Apps/Python.png" width="50px;/> | Python | Python is an interpreted, high-level and general-purpose programming language. Python's design philosophy emphasizes code readability with its notable use of significant whitespace. |
-| <img src="Images/Logo Apps/Pygame.png" width="50px;/> | Pygame | Pygame is a cross-platform set of Python modules designed for writing video games. It includes computer graphics and sound libraries designed to be used with the Python programming language. |
-| <img src="Images/Logo Apps/Mediapipe.png" width="50px;/> | MediaPipe | MediaPipe is a cross-platform framework for building multimodal applied machine learning pipelines. MediaPipe is used for object detection, face detection, hand tracking, and pose detection. |
+| <img src="Images/Logo Apps/Python.png" style="width:50px;"/> | **Python** | Python is an interpreted, high-level and general-purpose programming language. Python's design philosophy emphasizes code readability with its notable use of significant whitespace. |
+| <img src="Images/Logo Apps/Pygame.png" style="width:50px;"/> | **Pygame** | Pygame is a cross-platform set of Python modules designed for writing video games. It includes computer graphics and sound libraries designed to be used with the Python programming language. |
+| <img src="Images/Logo Apps/Mediapipe.png" style="width:50px;"/> | **MediaPipe** | MediaPipe is a cross-platform framework for building multimodal applied machine learning pipelines. MediaPipe is used for object detection, face detection, hand tracking, and pose detection. |
 
 </div>
