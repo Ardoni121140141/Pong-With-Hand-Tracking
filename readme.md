@@ -13,6 +13,8 @@
 
 [Role & Position Member Of Team]()
 
+[Technology Application]()
+
 [Installation Steps]()
 
 [Documentation]()
@@ -36,5 +38,16 @@ This project combines the concept of the classic game Pong with motion tracking 
 | Ardoni Yeriko Rifana Gultom     | 121140141 | R | Informatics Engineering
 | Kevin Simorangkir               | 121140150 | R | Informatics Engineering
 | M. Rizki Alfaina                | 121140228 | R | Informatics Engineering
+
+</div>
+
+## <img src="Images/Mentahan/Panah.svg" width="30px;"/> **Technology Application**
+<div align="left">
+
+| Technology | Name Tech | Description |
+| :---: | :---: | :---: |
+| <img src="Images/Mentahan/Python.png" width="50px;/> | Python | Python is an interpreted, high-level and general-purpose programming language. Python's design philosophy emphasizes code readability with its notable use of significant whitespace. |
+| <img src="Images/Mentahan/Pygame.png" width="50px;/> | Pygame | Pygame is a cross-platform set of Python modules designed for writing video games. It includes computer graphics and sound libraries designed to be used with the Python programming language. |
+| <img src="Images/Mentahan/MediaPipe.png" width="50px;/> | MediaPipe | MediaPipe is a cross-platform framework for building multimodal applied machine learning pipelines. MediaPipe is used for object detection, face detection, hand tracking, and pose detection. |
 
 </div>
