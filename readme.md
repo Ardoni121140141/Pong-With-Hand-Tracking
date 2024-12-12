@@ -51,3 +51,29 @@ This project combines the concept of the classic game Pong with motion tracking 
 | <img src="Images/Logo Apps/Mediapipe.png" style="width:50px;"/> | **MediaPipe** | MediaPipe is a cross-platform framework for building multimodal applied machine learning pipelines. MediaPipe is used for object detection, face detection, hand tracking, and pose detection. |
 
 </div>
+
+## <img src="Images/Mentahan/Panah.svg" width="30px;"/> **Installation Steps**
+### <img src="Images/Mentahan/LogoPanah2.svg" width="30px;"/> **Preparation of Needs**
+Some of the preparations needed to carry out this research project are as follows:
+
+<li> Install python software/code first </li>
+
+```bash
+https://www.python.org/downloads/
+```
+
+<li> After installing, first check whether Python has been installed properly using the following command: </li>
+
+```bash
+python --version
+```
+
+<li> Once the python version appears, please open a text editor that supports it such as Visual Studio Code and the web-based Google Collab. Here are the links to use both (please download and install) :</li>
+
+```bash
+[Software VISUAL STUDIO CODE](https://code.visualstudio.com/)
+```
+
+```bash
+[Software GOOGLE COLLAB](https://colab.research.google.com/)
+```
