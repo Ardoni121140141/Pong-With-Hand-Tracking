@@ -53,7 +53,7 @@ This project combines the concept of the classic game Pong with motion tracking 
 </div>
 
 ## <img src="Images/Mentahan/Panah.svg" width="30px;"/> **Installation Steps**
-### <img src="Images/Mentahan/LogoPanah2.svg" width="30px;"/> **Preparation of Needs**
+### <img src="Images/Mentahan/Panah2.svg" width="30px;"/> **Preparation of Needs**
 Some of the preparations needed to carry out this research project are as follows:
 
 <li> Install python software/code first </li>
