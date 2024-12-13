@@ -77,3 +77,34 @@ python --version
 ```bash
 [Software GOOGLE COLLAB](https://colab.research.google.com/)
 ```
+
+<li> To install Pygame, please use the following command: </li>
+
+```bash
+pip install pygame
+```
+
+<li> To install MediaPipe, please use the following command: </li>
+
+```bash
+pip install mediapipe
+```
+
+### <img src="Images/Mentahan/Panah2.png" width="30px;"/> **Installation Steps**
+<li> Open a terminal / something like GitBash etc. Please clone this Repository by following the following command and copy it in your terminal: </li>
+
+```bash
+https://github.com/Ardoni121140141/Pong-With-Hand-Tracking.git
+```
+
+<li>Please change the directory to point to the clone folder with the following command:</li>
+
+```bash
+cd Pong-With-Hand-Tracking
+```
+
+<li> After that, please run the following command to run the program:</li>
+
+```bash
+python main.py
+```
