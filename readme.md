@@ -90,7 +90,7 @@ pip install pygame
 pip install mediapipe
 ```
 
-### <img src="Images/Mentahan/Panah2.png" width="30px;"/> **Installation Steps**
+### <img src="Images/Mentahan/Panah2.png" width="30px;"/> **Program Running Stage**
 <li> Open a terminal / something like GitBash etc. Please clone this Repository by following the following command and copy it in your terminal: </li>
 
 ```bash
@@ -108,3 +108,5 @@ cd Pong-With-Hand-Tracking
 ```bash
 python main.py
 ```
+
+## <img src="Images/Mentahan/Panah.svg" width="30px;"/> **Weekly Logbook**
