@@ -17,7 +17,7 @@
 
 [Installation Steps]()
 
-[Documentation]()
+[Weekly Logbook]()
 
 [Discussion Analysis]()
 
