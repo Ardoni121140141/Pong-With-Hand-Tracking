@@ -110,3 +110,6 @@ python main.py
 ```
 
 ## <img src="Images/Mentahan/Panah.svg" width="30px;"/> **Weekly Logbook**
+| Week | Task |
+| :---: | :---: |
+| Week 1 | - Installing OpenCV, Pygame and Mediapipe modules <br> - Save the requirements.txt file for the purpose of installing dependencies. <br> - Creating basic code to detect hand gestures using MediaPipe |
