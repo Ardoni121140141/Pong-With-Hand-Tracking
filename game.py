@@ -46,8 +46,8 @@ class Game:
         # Inisialisasi posisi bola dan kecepatan
         self.ball_x = self.WIDTH // 2
         self.ball_y = self.HEIGHT // 2
-        self.ball_dx = 5
-        self.ball_dy = 5
+        self.ball_dx = 8
+        self.ball_dy = 8
 
         # Inisialisasi skor
         self.left_score = 0
