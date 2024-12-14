@@ -10,7 +10,7 @@ pygame.init()
 
 # Konstanta Game
 WIDTH, HEIGHT = 800, 600
-FPS = 60
+FPS = 120
 
 # Warna menggunakan format RGB
 BALL_COLOR = (0, 0, 255)  # Merah
@@ -20,9 +20,13 @@ WINNER_COLOR = (255, 0, 0)  # Merah
 TIMER_COLOR = (255, 255, 255)  # Putih
 BACKGROUND_COLOR = (0, 0, 0)  # Latar belakang hitam
 
+# Initialize ball speed
+ball_speed = 5  # Default ball speed
+
 # Inisialisasi layar
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Pong with Hand Tracking")
+
 
 # Inisialisasi MediaPipe Hand Tracking
 mp_hands = mp.solutions.hands
@@ -41,7 +45,7 @@ def countdown():
         pygame.display.flip()
         pygame.time.wait(1000)
 
-def main_menu():
+def main_menu(ball_speed):
     font = pygame.font.Font(None, 74)
     while True:
         screen.fill(BACKGROUND_COLOR)
@@ -58,16 +62,15 @@ def main_menu():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
-                return
+                return ball_speed
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_RETURN:
-                    return  # Start the game
+                    return ball_speed  # Start the game
                 if event.key == pygame.K_s:
-                    ball_speed = settings_menu()  # Get the ball speed from settings
-                    continue  # Return to the main menu after settings
+                    ball_speed = settings_menu(ball_speed)  # Pass ball_speed to settings_menu
+                    continue
 
-def settings_menu():
-    ball_speed = 5  # Default ball speed
+def settings_menu(ball_speed):
     font = pygame.font.Font(None, 74)
     while True:
         screen.fill(BACKGROUND_COLOR)
@@ -84,19 +87,24 @@ def settings_menu():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
-                return ball_speed  # Return the current ball speed
+                return ball_speed
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_b:
                     return ball_speed  # Go back to main menu and return ball speed
                 if event.key == pygame.K_UP:
                     ball_speed += 1  # Increase ball speed
+                    print(f"Ball speed increased to: {ball_speed}")  # Debugging statement
                 if event.key == pygame.K_DOWN:
                     ball_speed = max(1, ball_speed - 1)  # Decrease ball speed, minimum 1
+                    print(f"Ball speed decreased to: {ball_speed}")  # Debugging statement
 
 # Main Game Loop
 def game_loop(ball_speed):
     if ball_speed is None:  # Ensure ball_speed is not None
         ball_speed = 5  # Default value if somehow it is None
+
+    print(f"Starting game loop with ball speed: {ball_speed}")  # Debugging statement
+
     # Inisialisasi Game dan Paddles
     game = Game(WIDTH, HEIGHT, BALL_COLOR, PADDLE_COLOR, BACKGROUND_COLOR, ball_speed)
     left_paddle = Paddle(10, game.HEIGHT // 2 - 50, 20, 100, PADDLE_COLOR)
@@ -156,9 +164,10 @@ def game_loop(ball_speed):
         pygame.time.Clock().tick(FPS)
 
 
+
 # Start the game
 while True:
-    ball_speed = main_menu()  # Get the ball speed from the settings menu
+    ball_speed = main_menu(ball_speed)  # Pass the current ball speed
     game_loop(ball_speed)  # Start the game loop
 
 # Lepaskan resource
