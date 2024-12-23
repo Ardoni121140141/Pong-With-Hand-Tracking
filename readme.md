@@ -112,6 +112,10 @@ python main.py
 | Week 3 | - Implementing the game logic for the Pong game <br> - Finalizing the program code <br> - Preparation and Finalization of the Report <br> | Ardoni Yeriko, Kevin Simorangkir & Alfaina | Done |
 | Week 4 | - Finalizing the report and code <br> -  Collecting programs and reports | Ardoni Yeriko, Kevin Simorangkir & Alfaina | Done |
 
+## <img src="Images/Mentahan/Panah.svg" width="30px;"/> **Report**
+The following is a report of the program that we made: 
+[Report](https://www.overleaf.com/read/xpcxmdtnpbxt#63b1b0)
+
 ## <img src="Images/Mentahan/Panah.svg" width="30px;"/> **Program Demonstration**
 The following is a demonstration of the program that we made:
 
