@@ -58,6 +58,20 @@ game_start_time = time.time()
 
 # Main Game Loop
 while True:
+    # Periksa event pygame untuk keluar
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:  # Deteksi jika pengguna menekan tombol close window
+            cap.release()
+            pygame.quit()
+            cv2.destroyAllWindows()
+            exit()  # Keluar dari program
+        elif event.type == pygame.KEYDOWN:  # Deteksi jika tombol keyboard ditekan
+            if event.key == pygame.K_ESCAPE:  # Keluar jika tombol ESC ditekan
+                cap.release()
+                pygame.quit()
+                cv2.destroyAllWindows()
+                exit()  # Keluar dari program
+
     # Capture frame dari webcam
     ret, frame = cap.read()
     if not ret:
