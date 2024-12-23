@@ -113,5 +113,5 @@ python main.py
 | Week | Task | Person | Status |
 | :---: | :---: | :---: | :---: |
 | Week 1 | - Installing OpenCV, Pygame and Mediapipe modules <br> - Save the requirements.txt file for the purpose of installing dependencies. <br> - Creating basic code to detect hand gestures using MediaPipe | Ardoni Yeriko & Kevin Simorangkir | Done |
-| Week 2 | - Creating a Paddle in a Pong Game (`paddle.py`) <br> - Creating a Pong game using Pygame, Creating a collision detection system and check the winner (`game.py`) <br> - Implementing 
-hand tracking using MediaPipe for Game Pong (`main.py`) <br> | Ardoni Yeriko & Kevin Simorangkir & Alfaina | Done
+| Week 2 | - Creating a Paddle in a Pong Game (`paddle.py`) <br> - Creating a Pong game using Pygame, Creating a collision detection system and check the winner (`game.py`) <br> - Implementing hand tracking using MediaPipe for Game Pong (`main.py`) <br> | Ardoni Yeriko, Kevin Simorangkir & Alfaina | Done
+| Week 3 | - Implementing the game logic for the Pong game <br> - Finalizing the program code <br> - Preparation and Finalization of the Report <br> | Ardoni Yeriko, Kevin Simorangkir & Alfaina | Done |
