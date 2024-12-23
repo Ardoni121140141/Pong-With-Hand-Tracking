@@ -143,9 +143,8 @@ def game_loop(ball_speed):
     left_paddle = Paddle(10, HEIGHT // 2 - 50, 20, 100, PADDLE_COLOR)
     right_paddle = Paddle(WIDTH - 30, HEIGHT // 2 - 50, 20, 100, PADDLE_COLOR)
 
-    # Mulai countdown
+    # Countdown hanya dilakukan sekali di awal
     countdown()
-    countdown_done = False  # Flag to indicate if countdown is done
 
     paused = False  # Status jeda
     start_time = time.time()  # Waktu awal permainan
@@ -153,30 +152,19 @@ def game_loop(ball_speed):
     while True:
         # Periksa event dari pemain
         for event in pygame.event.get():
-            if event.type == pygame.QUIT:  # Detect if the user clicks the close window
-                cap.release()
-                pygame.quit()
-                cv2.destroyAllWindows()
-                sys.exit()  # Exit the program
-            elif event.type == pygame.KEYDOWN:  # Detect if a keyboard key is pressed
-                if event.key == pygame.K_ESCAPE:  # Pause the game if ESC is pressed
-                    if paused:
-                        paused = False  # Resume the game
-                        game_start_time += time.time() - pause_start_time  # Adjust start time
-                    else:
-                        paused = True  # Pause the game
-                        pause_start_time = time.time()  # Record the time when paused
-        if not countdown_done:
-            countdown()
-            countdown_done = True
+            if event.type == pygame.QUIT:  # Jika pengguna menutup jendela
+                clean_exit()
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_ESCAPE:  # Pause jika ESC ditekan
+                    paused = not paused  # Toggle status jeda
+
         if paused:
-            # If the game is paused, show the pause screen
-            if pause_screen():  # If user chooses to go to main menu
-                return  # Return to main menu
+            # Jika permainan dijeda, tampilkan layar pause
+            if pause_screen():  # Jika pemain memilih kembali ke menu utama
+                return  # Kembali ke menu utama
             else:
-                paused = False  # Resume the game
-                print("Game resumed")  # Debugging statement
-            continue  # Skip the rest of the loop
+                paused = False  # Lanjutkan permainan
+            continue  # Lewati loop utama jika dijeda
 
         ret, frame = cap.read()  # Membaca frame dari kamera
         if not ret:
@@ -209,28 +197,26 @@ def game_loop(ball_speed):
 
 
 def pause_screen():
+    """
+    Menampilkan layar pause.
+    """
     font = pygame.font.Font(None, 74)
     while True:
         screen.fill(BACKGROUND_COLOR)
-        pause_text = font.render("Paused", True, TIMER_COLOR)
-        mainmenu_confirm_text = font.render("Press ESC to go to Main Menu", True, TIMER_COLOR)
-        continue_confirm_text = font.render("ENTER to Continue", True, TIMER_COLOR)
-
-        screen.blit(pause_text, (WIDTH // 2 - pause_text.get_width() // 2, HEIGHT // 4))
-        screen.blit(mainmenu_confirm_text, (WIDTH // 2 - mainmenu_confirm_text.get_width() // 2, HEIGHT // 2))
-        screen.blit(continue_confirm_text, (WIDTH // 2 - continue_confirm_text.get_width() // 2, HEIGHT // 2 + 50))
+        display_text_centered(screen, "Paused", font, TIMER_COLOR, y_offset=-50)
+        display_text_centered(screen, "Press ENTER to Resume", font, TIMER_COLOR)
+        display_text_centered(screen, "Press ESC to Quit", font, TIMER_COLOR, y_offset=50)
         pygame.display.flip()
+
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                cap.release()
-                pygame.quit()
-                cv2.destroyAllWindows()
-                sys.exit()  # Exit the program
+                clean_exit()
             if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_ESCAPE:  # Go to main menu
-                    return True  # Indicate to go to main menu
-                if event.key == pygame.K_RETURN:  # Resume game
-                    return False  # Continue the game
+                if event.key == pygame.K_RETURN:  # Kembali ke permainan
+                    return False
+                if event.key == pygame.K_ESCAPE:  # Keluar dari permainan
+                    return True
+
 
 def control_paddles(left_paddle, right_paddle, hand_landmarks):
     """
