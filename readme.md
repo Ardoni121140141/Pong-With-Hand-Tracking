@@ -19,7 +19,7 @@
 
 [Weekly Logbook]()
 
-[Discussion Analysis]()
+[Report]()
 
 [Presentation Video]()
 
@@ -62,7 +62,7 @@ Some of the preparations needed to carry out this research project are as follow
 https://www.python.org/downloads/
 ```
 
-<li> After installing, first check whether Python has been installed properly using the following command: </li>
+<li> After installing, first check whether Python has been installed properly using the following command, make sure the Python version you are using is between 3.10 and 3.12. : </li>
 
 ```bash
 python --version
@@ -78,29 +78,23 @@ python --version
 [Software GOOGLE COLLAB](https://colab.research.google.com/)
 ```
 
-<li> To install Pygame, please use the following command: </li>
-
-```bash
-pip install pygame
-```
-
-<li> To install MediaPipe, please use the following command: </li>
-
-```bash
-pip install mediapipe
-```
-
 ### <img src="Images/Mentahan/Panah2.png" width="30px;"/> **Program Running Stage**
 <li> Open a terminal / something like GitBash etc. Please clone this Repository by following the following command and copy it in your terminal: </li>
 
 ```bash
-https://github.com/Ardoni121140141/Pong-With-Hand-Tracking.git
+git clone https://github.com/Ardoni121140141/Pong-With-Hand-Tracking.git
 ```
 
 <li>Please change the directory to point to the clone folder with the following command:</li>
 
 ```bash
 cd Pong-With-Hand-Tracking
+```
+
+<li> To install requirements, please use the following command: </li>
+
+```bash
+pip install -r requirements.txt
 ```
 
 <li> After that, please run the following command to run the program:</li>
