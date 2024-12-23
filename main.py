@@ -145,6 +145,7 @@ def game_loop(ball_speed):
 
     # Mulai countdown
     countdown()
+    countdown_done = False  # Flag to indicate if countdown is done
 
     paused = False  # Status jeda
     start_time = time.time()  # Waktu awal permainan
@@ -152,13 +153,30 @@ def game_loop(ball_speed):
     while True:
         # Periksa event dari pemain
         for event in pygame.event.get():
-            if event.type == pygame.QUIT:  # Jika jendela ditutup
-                clean_exit()
-            if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:  # Jika ESC ditekan
-                paused = not paused  # Toggle status jeda
-
+            if event.type == pygame.QUIT:  # Detect if the user clicks the close window
+                cap.release()
+                pygame.quit()
+                cv2.destroyAllWindows()
+                sys.exit()  # Exit the program
+            elif event.type == pygame.KEYDOWN:  # Detect if a keyboard key is pressed
+                if event.key == pygame.K_ESCAPE:  # Pause the game if ESC is pressed
+                    if paused:
+                        paused = False  # Resume the game
+                        game_start_time += time.time() - pause_start_time  # Adjust start time
+                    else:
+                        paused = True  # Pause the game
+                        pause_start_time = time.time()  # Record the time when paused
+        if not countdown_done:
+            countdown()
+            countdown_done = True
         if paused:
-            continue  # Jika permainan dijeda, lewati loop
+            # If the game is paused, show the pause screen
+            if pause_screen():  # If user chooses to go to main menu
+                return  # Return to main menu
+            else:
+                paused = False  # Resume the game
+                print("Game resumed")  # Debugging statement
+            continue  # Skip the rest of the loop
 
         ret, frame = cap.read()  # Membaca frame dari kamera
         if not ret:
@@ -189,6 +207,30 @@ def game_loop(ball_speed):
         game.draw_game(frame, left_paddle, right_paddle, time.time() - start_time)
         pygame.time.Clock().tick(FPS)  # Kontrol kecepatan frame
 
+
+def pause_screen():
+    font = pygame.font.Font(None, 74)
+    while True:
+        screen.fill(BACKGROUND_COLOR)
+        pause_text = font.render("Paused", True, TIMER_COLOR)
+        mainmenu_confirm_text = font.render("Press ESC to go to Main Menu", True, TIMER_COLOR)
+        continue_confirm_text = font.render("ENTER to Continue", True, TIMER_COLOR)
+
+        screen.blit(pause_text, (WIDTH // 2 - pause_text.get_width() // 2, HEIGHT // 4))
+        screen.blit(mainmenu_confirm_text, (WIDTH // 2 - mainmenu_confirm_text.get_width() // 2, HEIGHT // 2))
+        screen.blit(continue_confirm_text, (WIDTH // 2 - continue_confirm_text.get_width() // 2, HEIGHT // 2 + 50))
+        pygame.display.flip()
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                cap.release()
+                pygame.quit()
+                cv2.destroyAllWindows()
+                sys.exit()  # Exit the program
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_ESCAPE:  # Go to main menu
+                    return True  # Indicate to go to main menu
+                if event.key == pygame.K_RETURN:  # Resume game
+                    return False  # Continue the game
 
 def control_paddles(left_paddle, right_paddle, hand_landmarks):
     """
