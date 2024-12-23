@@ -21,7 +21,7 @@
 
 [Report]()
 
-[Presentation Video]()
+[Program Demonstration]()
 
 ## <img src="Images/Mentahan/Panah.svg" width="30px;"/> **Introduction**
 This project combines the concept of the classic game Pong with motion tracking technology. In this program, the user moves the paddle by utilizing hand movements detected through a webcam camera. This project uses MediaPipe to detect the position of the user's fingers in real-time, and Pygame to display game elements such as the ball, paddle, and score on the screen.
@@ -110,3 +110,6 @@ python main.py
 | Week 2 | - Creating a Paddle in a Pong Game (`paddle.py`) <br> - Creating a Pong game using Pygame, Creating a collision detection system and check the winner (`game.py`) <br> - Implementing hand tracking using MediaPipe for Game Pong (`main.py`) <br> | Ardoni Yeriko, Kevin Simorangkir & Alfaina | Done
 | Week 3 | - Implementing the game logic for the Pong game <br> - Finalizing the program code <br> - Preparation and Finalization of the Report <br> | Ardoni Yeriko, Kevin Simorangkir & Alfaina | Done |
 | Week 4 | - Finalizing the report and code <br> -  Collecting programs and reports | Ardoni Yeriko, Kevin Simorangkir & Alfaina | Done |
+
+## <img src="Images/Mentahan/Panah.svg" width="30px;"/> **Program Demonstration**
+The following is a link to the presentation video of the RPPG Final Project:
