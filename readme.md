@@ -112,4 +112,8 @@ python main.py
 | Week 4 | - Finalizing the report and code <br> -  Collecting programs and reports | Ardoni Yeriko, Kevin Simorangkir & Alfaina | Done |
 
 ## <img src="Images/Mentahan/Panah.svg" width="30px;"/> **Program Demonstration**
-The following is a link to the presentation video of the RPPG Final Project:
+The following is a demonstration of the program that we made:
+
+<a href="https://youtu.be/9QVruUd-VEs?si=4nSlnVnqBwENb50m" target="_blank">
+  <img src="https://i.ytimg.com/vi/9QVruUd-VEs/maxresdefault.jpg" alt="Presentation Video">
+</a>
