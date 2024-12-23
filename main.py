@@ -2,6 +2,7 @@ import cv2
 import mediapipe as mp
 import pygame
 import time
+import sys
 from paddle import Paddle
 from game import Game
 
