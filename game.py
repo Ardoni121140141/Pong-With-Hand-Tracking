@@ -27,7 +27,7 @@ class Game:
         check_for_winner: Mengecek jika ada pemenang.
     """
 
-    def __init__(self, width, height, ball_color, paddle_color, background_color):
+    def __init__(self, width, height, ball_color, paddle_color, background_color, ball_speed=5):
         """Inisialisasi atribut permainan.
 
         Args:
@@ -36,6 +36,7 @@ class Game:
             ball_color (tuple): Warna bola.
             paddle_color (tuple): Warna paddle.
             background_color (tuple): Warna latar belakang.
+            ball_speed (int): Kecepatan bola.
         """
         self.WIDTH = width
         self.HEIGHT = height
@@ -46,8 +47,8 @@ class Game:
         # Inisialisasi posisi bola dan kecepatan
         self.ball_x = self.WIDTH // 2
         self.ball_y = self.HEIGHT // 2
-        self.ball_dx = 8
-        self.ball_dy = 8
+        self.ball_dx = ball_speed
+        self.ball_dy = ball_speed
 
         # Inisialisasi skor
         self.left_score = 0
@@ -146,7 +147,8 @@ class Game:
         """
         self.ball_x = self.WIDTH // 2
         self.ball_y = self.HEIGHT // 2
-        self.ball_dx *= -1
+        self.ball_dx *= -1  # Invert direction
+        self.ball_dy *= -1  # Invert direction
 
     def check_for_winner(self):
         """
